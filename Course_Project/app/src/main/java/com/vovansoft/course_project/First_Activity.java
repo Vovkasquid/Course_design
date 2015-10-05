@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class First_Activity extends AppCompatActivity {
 
@@ -11,6 +14,19 @@ public class First_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_);
+        textView = (TextView) findViewById(R.id.textView);
+        button = (Button) findViewById(R.id.button2);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setText("Ты кто?");
+            }
+        });
+    }
+
+    public void Say_Hello(View view) {
+        textView.setText("Привет!");
     }
 
     @Override
@@ -19,6 +35,9 @@ public class First_Activity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_first_, menu);
         return true;
     }
+
+    private TextView textView;
+    private Button button;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -31,7 +50,6 @@ public class First_Activity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

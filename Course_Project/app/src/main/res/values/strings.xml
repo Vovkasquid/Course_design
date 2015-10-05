@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Course_Project</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world! I want to be a programmer!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_name">Привет!</string>
+    <string name="btn_name1">Ты кто?</string>
 </resources>
